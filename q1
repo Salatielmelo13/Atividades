@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+ // cria uma matriz de tamanho lins x cols
+int main(){
+  int **criamatriz;
+  int lins,colns;
+  printf("Qunatidade de linhas:");
+  scanf("%d",&lins);
+  printf("Quantidade de colunas:");
+  scanf("%d",&colns);
+  criamatriz=malloc(lins*sizeof(int));
+  for (int i=0;i<lins;i++){
+    criamatriz[i]=malloc(colns*sizeof(int));
+  }
+  
+  for (int i=0;i<lins;i++){
+   for (int j=0;j<lins;j++){
+     printf("Matriz[%d][%d]: %d",i,j,criamatriz[i][j]);
+   
+   printf("\n");
+   }
+  }
+ }
